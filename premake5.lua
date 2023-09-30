@@ -420,7 +420,8 @@ print ("")
 
 project "SoloudStatic"
 	kind "StaticLib"
-	targetdir "lib"
+	targetdir ("bin/" .. outdir .. "/%{prj.name}")
+	objdir ("bin/int/" .. outdir .. "/%{prj.name}")
 	language "C++"
 
 	files
