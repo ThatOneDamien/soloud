@@ -1,5 +1,6 @@
 Debug/
 _UpgradeReport_Files/
+*.vcxproj*
 *.ipch
 *.opensdf
 *.sdf
@@ -35,3 +36,4 @@ scripts/soloud_codegen.py
 glue/rpgmaker_soloud.rb
 *.lastcodeanalysissucceeded
 *.bak
+.vs
