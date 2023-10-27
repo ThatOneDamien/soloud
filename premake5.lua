@@ -423,6 +423,8 @@ project "SoloudStatic"
 	targetdir ("bin/" .. outdir .. "/%{prj.name}")
 	objdir ("bin/int/" .. outdir .. "/%{prj.name}")
 	language "C++"
+	cppdialect "C++17"
+	staticruntime "on"
 
 	files
 	{
