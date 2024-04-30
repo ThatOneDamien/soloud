@@ -37,6 +37,7 @@ glue/rpgmaker_soloud.rb
 *.lastcodeanalysissucceeded
 *.bak
 .vs
+**/Makefile
 
 # Ruby Specific
 bin
