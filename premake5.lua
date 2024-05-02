@@ -420,8 +420,8 @@ print ("")
 
 project "SoloudStatic"
 	kind "StaticLib"
-	targetdir ("bin/" .. outdir .. "/%{prj.name}")
-	objdir ("bin/int/" .. outdir .. "/%{prj.name}")
+	targetdir ("%{wks.location}/bin/" .. outdir .. "/%{prj.name}")
+	objdir ("%{wks.location}/bin/int/" .. outdir .. "/%{prj.name}")
 	language "C++"
 	cppdialect "C++17"
 	staticruntime "on"
@@ -553,7 +553,15 @@ project "SoloudStatic"
 		includedirs {
 		"include"
 		}
-	end    
+	end
+
+    filter "configurations:Debug"
+        runtime "Debug"
+        symbols "on"
+
+    filter "configurations:Release"
+        runtime "Release"
+        optimize "on"
 
 -- 8< -- 8< -- 8< -- 8< -- 8< -- 8< -- 8< -- 8< -- 8< -- 8< --
 --
